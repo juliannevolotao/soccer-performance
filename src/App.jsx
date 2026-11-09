@@ -7,9 +7,12 @@ import Oferta from './components/Oferta.jsx'
 import Sobre from './components/Sobre.jsx'
 import Galeria from './components/Galeria.jsx'
 import Depoimentos from './components/Depoimentos.jsx'
+import useReveal from './useReveal.js'
 import { Garantia, Duvidas, Chamada, Rodape } from './components/Final.jsx'
 
 export default function App() {
+  useReveal()
+
   return (
     <main className="overflow-hidden">
       <Hero />
