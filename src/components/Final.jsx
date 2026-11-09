@@ -84,6 +84,14 @@ export function Rodape() {
             · {site.email}
           </span>
           <span>Pagamento processado pela Eduzz · © {new Date().getFullYear()}</span>
+          <a
+            href="https://instagram.com/juliannevolotao"
+            target="_blank"
+            rel="noopener"
+            className="mt-2 text-[11px] text-[#3A3A3A] no-underline transition-colors hover:text-subtle"
+          >
+            site desenvolvido por JVS
+          </a>
         </div>
       </div>
     </footer>

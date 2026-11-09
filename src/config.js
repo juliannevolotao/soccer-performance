@@ -88,8 +88,4 @@ export const duvidas = [
     pergunta: 'Serve para qualquer nível?',
     resposta: '[Resposta do Mateus sobre o nível indicado]',
   },
-  {
-    pergunta: 'Tem garantia?',
-    resposta: 'Sim. Você tem 7 dias para conhecer o programa. Se não gostar, devolvemos o valor.',
-  },
 ]
