@@ -159,3 +159,22 @@
     transition: none;
   }
 }
+
+/* Faixa laranja: vai e volta devagar para os lados */
+.faixa-balanco {
+  animation: faixa-balanco 9s ease-in-out infinite alternate;
+}
+@keyframes faixa-balanco {
+  from {
+    transform: translateX(-3%);
+  }
+  to {
+    transform: translateX(-11%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faixa-balanco {
+    animation: none;
+    transform: translateX(-3%);
+  }
+}

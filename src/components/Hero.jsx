@@ -86,7 +86,7 @@ export default function Hero() {
             width="1024"
             height="1536"
             fetchPriority="high"
-            className="relative block h-auto w-full max-w-[500px] [mask-image:linear-gradient(to_bottom,#000_78%,transparent_100%)]"
+            className="relative block h-auto w-full max-w-[500px]"
           />
           <div className="absolute bottom-[120px] -left-3 flex flex-col gap-0.5 border border-[#2E2E2E] bg-black py-3.5 pr-[22px] pl-[18px] [clip-path:polygon(0_0,100%_0,94%_100%,0_100%)]">
             <span className="dsp text-[30px] leading-none">Mateus Leon</span>

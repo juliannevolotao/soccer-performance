@@ -1,22 +1,39 @@
+import { useId, useState } from 'react'
 import { duvidas, site } from '../config.js'
 
-export function Garantia() {
+function Pergunta({ pergunta, resposta, inicial }) {
+  const [aberta, setAberta] = useState(inicial)
+  const id = useId()
   return (
-    <section className="pt-[90px] pb-10">
-      <div className="wrap flex flex-wrap items-center gap-x-10 gap-y-7">
-        <div className="flex h-32 w-32 flex-none flex-col items-center justify-center bg-brand text-black [clip-path:polygon(14%_0,100%_0,86%_100%,0_100%)]">
-          <span className="dsp text-[64px]">7</span>
-          <span className="text-sm font-bold uppercase">dias</span>
-        </div>
-        <div className="min-w-0 flex-[1_1_420px]">
-          <h2 className="dsp m-0 text-[clamp(34px,4vw,48px)]">Garantia de 7 dias</h2>
-          <p className="mt-2.5 mb-0 max-w-[640px] text-muted">
-            Comece o programa sem risco. Se em até 7 dias você achar que não é para você, peça o reembolso e devolvemos
-            100% do valor.
-          </p>
+    <div className="border-b border-line">
+      <h3 className="m-0">
+        <button
+          type="button"
+          aria-expanded={aberta}
+          aria-controls={id}
+          onClick={() => setAberta((v) => !v)}
+          className="flex min-h-16 w-full cursor-pointer items-center justify-between gap-4 border-0 bg-transparent p-0 text-left font-body text-[19px] font-semibold text-ink"
+        >
+          {pergunta}
+          <span
+            aria-hidden="true"
+            className={`font-display text-[34px] leading-none font-bold text-brand transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${aberta ? 'rotate-45' : ''}`}
+          >
+            +
+          </span>
+        </button>
+      </h3>
+      {/* altura animada com grid 0fr → 1fr: abre e fecha suave em qualquer navegador */}
+      <div
+        id={id}
+        role="region"
+        className={`grid transition-[grid-template-rows,opacity] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none ${aberta ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+      >
+        <div className="overflow-hidden" inert={!aberta}>
+          <p className="mt-0 mb-[22px] max-w-[760px] text-[17px] leading-relaxed text-muted">{resposta}</p>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 
@@ -27,15 +44,7 @@ export function Duvidas() {
         <h2 className="title-section m-0">Dúvidas frequentes</h2>
         <div className="border-t border-line">
           {duvidas.map((d, i) => (
-            <details key={d.pergunta} open={i === 0} className="group border-b border-line">
-              <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-4 text-[19px] font-semibold text-ink [&::-webkit-details-marker]:hidden">
-                {d.pergunta}
-                <span aria-hidden="true" className="font-display text-[34px] leading-none font-bold text-brand transition-transform group-open:rotate-45">
-                  +
-                </span>
-              </summary>
-              <p className="mt-0 mb-[22px] max-w-[760px] text-[17px] leading-relaxed text-muted">{d.resposta}</p>
-            </details>
+            <Pergunta key={d.pergunta} pergunta={d.pergunta} resposta={d.resposta} inicial={i === 0} />
           ))}
         </div>
       </div>
