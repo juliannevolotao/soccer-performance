@@ -5,7 +5,7 @@ export default function Faixa() {
   return (
     <div
       aria-hidden="true"
-      className="relative z-[2] -mt-10 -ml-[5%] w-[110%] -rotate-2 overflow-hidden whitespace-nowrap bg-brand py-4"
+      className="relative z-[2] -mt-[100px] -ml-[5%] w-[110%] -rotate-2 overflow-hidden whitespace-nowrap bg-brand py-4"
     >
       <span className="faixa-balanco dsp inline-block text-[34px] tracking-[0.02em] text-black">{texto}</span>
     </div>
