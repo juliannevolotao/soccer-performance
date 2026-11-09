@@ -1,4 +1,5 @@
 import Button from './Button.jsx'
+import Contador from './Contador.jsx'
 import { site } from '../config.js'
 
 const links = [
@@ -62,7 +63,9 @@ export default function Hero() {
           <div className="mt-[18px] flex flex-wrap gap-x-[34px] gap-y-2.5">
             {numeros.map((n) => (
               <div key={n.legenda} className="max-w-[150px]">
-                <div className="dsp text-[44px] text-brand">{n.valor}</div>
+                <div className="dsp text-[44px] text-brand">
+                  <Contador valor={n.valor} />
+                </div>
                 <div className="text-sm text-muted">{n.legenda}</div>
               </div>
             ))}

@@ -54,7 +54,7 @@ export function Duvidas() {
 
 export function Chamada() {
   return (
-    <section className="halftone relative bg-brand pt-[130px] pb-[110px] text-black [clip-path:polygon(0_64px,100%_0,100%_100%,0_100%)]">
+    <section id="chamada" className="halftone relative bg-brand pt-[130px] pb-[110px] text-black [clip-path:polygon(0_64px,100%_0,100%_100%,0_100%)]">
       <div className="wrap flex flex-wrap items-center justify-between gap-7">
         <h2 className="dsp m-0 max-w-[760px] text-[clamp(44px,6vw,84px)] text-black">
           A temporada começa antes do primeiro jogo

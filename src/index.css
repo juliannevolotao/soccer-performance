@@ -178,3 +178,9 @@
     transform: translateX(-3%);
   }
 }
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+}
