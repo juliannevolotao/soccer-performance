@@ -13,7 +13,7 @@ export default function Depoimentos() {
               </span>
               <blockquote className="m-0 text-soft">{d.texto}</blockquote>
               <figcaption className="flex flex-col">
-                <span className="font-bold">{d.nome}</span>
+                {d.nome && <span className="font-bold">{d.nome}</span>}
                 <span className="text-sm text-subtle">{d.detalhe}</span>
               </figcaption>
             </figure>

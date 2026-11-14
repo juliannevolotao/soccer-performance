@@ -52,13 +52,11 @@ export const depoimentos = [
   {
     texto:
       'Os resultados estão cada vez mais nítidos na minha performance. Depois da última mudança me senti ainda mais disposto, porque diminuiu a fadiga na musculatura, algo que eu sentia nos jogos.',
-    nome: '[Nome do atleta]',
     detalhe: 'Atleta acompanhado pelo Mateus',
   },
   {
     texto:
       'Trabalhamos juntos nas pré-temporadas antes de eu ir para os EUA. Foi muito importante na minha trajetória: evitei lesões e cheguei sempre voando lá. Fora o acompanhamento a distância, que ajudava bastante.',
-    nome: '[Nome do atleta]',
     detalhe: 'Atleta acompanhado nas pré-temporadas',
   },
   {
