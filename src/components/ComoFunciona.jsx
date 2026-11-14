@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 const treinos = ['Força geral', 'Força específica', 'Membros superiores', 'Core e estabilidade', 'Velocidade', 'Resistência']
 
 const fases = [
@@ -17,55 +15,13 @@ const fases = [
   },
 ]
 
-// t = treino, r = descanso, g = jogo
-const semanas = {
-  sem: {
-    rotulo: 'Sem jogo',
-    dias: [
-      ['Segunda', 'Força geral', 't'],
-      ['Terça', 'Força específica', 't'],
-      ['Quarta', 'Membros superiores', 't'],
-      ['Quinta', 'Velocidade', 't'],
-      ['Sexta', 'Core e estabilidade', 't'],
-      ['Sábado', 'Resistência', 't'],
-      ['Domingo', 'Descanso', 'r'],
-    ],
-  },
-  um: {
-    rotulo: '1 jogo',
-    dias: [
-      ['Segunda', 'Descanso', 'r'],
-      ['Terça', 'Força geral', 't'],
-      ['Quarta', 'Resistência', 't'],
-      ['Quinta', 'Membros superiores', 't'],
-      ['Sexta', 'Força específica', 't'],
-      ['Sábado', 'Descanso', 'r'],
-      ['Domingo', 'Jogo', 'g'],
-    ],
-  },
-  dois: {
-    rotulo: '2 jogos',
-    dias: [
-      ['Segunda', 'Descanso', 'r'],
-      ['Terça', 'Força geral', 't'],
-      ['Quarta', 'Jogo', 'g'],
-      ['Quinta', 'Membros superiores', 't'],
-      ['Sexta', 'Força específica', 't'],
-      ['Sábado', 'Descanso', 'r'],
-      ['Domingo', 'Jogo', 'g'],
-    ],
-  },
-}
-
-const estiloDia = {
-  t: 'bg-panel-2 text-ink border border-[#2E2E2E]',
-  r: 'bg-transparent text-[#A8A29D] border border-dashed border-[#4A4A4A]',
-  g: 'bg-brand text-black border border-brand',
-}
+const semanas = [
+  { rotulo: 'Sem jogo', texto: 'Semana completa de treinos para desenvolver tudo o que o jogo cobra.' },
+  { rotulo: '1 jogo', texto: 'Os treinos se reorganizam para você chegar inteiro no dia do jogo.' },
+  { rotulo: '2 jogos', texto: 'Treinos encaixados entre os jogos, sem perder o ritmo nem acumular fadiga.' },
+]
 
 export default function ComoFunciona() {
-  const [semana, setSemana] = useState('sem')
-
   return (
     <section id="como-funciona" className="pt-20 pb-[110px]">
       <div className="wrap flex flex-col gap-10">
@@ -116,33 +72,13 @@ export default function ComoFunciona() {
 
         <div className="mt-[30px] flex flex-col gap-5">
           <h3 className="dsp m-0 text-[clamp(32px,4vw,48px)]">Se adapta à sua semana de jogos</h3>
-          <div role="tablist" aria-label="Tipo de semana" className="flex flex-wrap gap-2">
-            {Object.entries(semanas).map(([id, s]) => {
-              const ativo = id === semana
-              return (
-                <button
-                  key={id}
-                  type="button"
-                  role="tab"
-                  aria-selected={ativo}
-                  onClick={() => setSemana(id)}
-                  className={`min-h-12 cursor-pointer border-0 px-6 font-display text-xl font-bold uppercase italic [clip-path:polygon(7%_0,100%_0,93%_100%,0_100%)] ${
-                    ativo ? 'bg-brand text-black' : 'bg-panel-2 text-soft hover:text-white'
-                  }`}
-                >
+          <div className="grid gap-3 md:grid-cols-3">
+            {semanas.map((s) => (
+              <div key={s.rotulo} className="flex flex-col gap-2.5 border border-[#2E2E2E] bg-panel-2 px-6 pt-5 pb-6">
+                <span className="self-start bg-brand px-5 py-1 font-display text-xl font-bold text-black uppercase italic [clip-path:polygon(7%_0,100%_0,93%_100%,0_100%)]">
                   {s.rotulo}
-                </button>
-              )
-            })}
-          </div>
-          <div role="tabpanel" className="grid gap-2 sm:grid-cols-4 lg:grid-cols-7">
-            {semanas[semana].dias.map(([dia, item, tipo]) => (
-              <div
-                key={dia}
-                className={`flex min-h-[104px] flex-col justify-between gap-2.5 px-3.5 pt-3.5 pb-4 ${estiloDia[tipo]}`}
-              >
-                <span className="text-[13px] font-semibold tracking-[0.04em] uppercase opacity-80">{dia}</span>
-                <span className="font-display text-xl leading-[1.05] font-bold uppercase italic">{item}</span>
+                </span>
+                <p className="m-0 text-soft">{s.texto}</p>
               </div>
             ))}
           </div>

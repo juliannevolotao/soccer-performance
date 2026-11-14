@@ -62,9 +62,10 @@ export const depoimentos = [
     detalhe: 'Atleta acompanhado nas pré-temporadas',
   },
   {
-    texto: '[Depoimento do terceiro atleta]',
-    nome: '[Nome do atleta]',
-    detalhe: '[Clube · posição]',
+    texto:
+      'Esses trabalhos antes de voltar pro clube têm me ajudado muito, principalmente na parte física. Sinto que venho evoluindo a cada preparação e que chego cada vez melhor e mais preparado pro início da temporada. É muito bom começar a temporada me sentindo bem, sabendo que fiz uma boa preparação e que estou pronto para os desafios que vêm pela frente.',
+    nome: 'Vitinho',
+    detalhe: 'Atleta acompanhado antes da temporada',
   },
 ]
 

@@ -3,7 +3,6 @@ import { site } from '../config.js'
 const destaques = [
   { valor: '+1.000', legenda: 'atletas treinados', laranja: true },
   { valor: 'Ex-atleta', legenda: 'conhece o jogo por dentro' },
-  { valor: 'NAR', legenda: 'pós em alto rendimento' },
 ]
 
 export default function Sobre() {
