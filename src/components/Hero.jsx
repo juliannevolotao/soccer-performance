@@ -41,8 +41,8 @@ export default function Hero() {
 
       <div className="wrap relative grid gap-x-6 lg:min-h-[680px] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:grid-rows-[auto_1fr]">
         <div className="flex flex-col items-start gap-4 pt-10 lg:gap-[22px] lg:pt-14">
-          <p className="m-0 font-label text-[10.5px] leading-[1.6] tracking-[0.08em] lg:text-xs lg:tracking-[0.1em] text-muted">
-            PROGRAMA DE TREINO <br className="sm:hidden" />
+          <p className="m-0 font-label text-[10.5px] leading-[1.6] tracking-[0.08em] lg:max-[1399px]:text-[11px] min-[1400px]:text-[10px] min-[1400px]:tracking-[0.06em] text-muted">
+            PROGRAMA DE TREINO <br className="min-[1400px]:hidden" />
             PARA ATLETAS DE FUTEBOL
           </p>
           <h1 className="dsp m-0 text-[clamp(64px,7.4vw,112px)] text-white">

@@ -51,7 +51,7 @@ export default function Sobre() {
             Meu trabalho é desenvolver o que decide o jogo: força, potência, velocidade, resistência e prevenção de
             lesões. Com ciência, planejamento e consistência, para você chegar mais preparado aos momentos decisivos.
           </p>
-          <div className="mt-2 flex flex-col gap-[18px] lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:border-t lg:border-line lg:pt-[22px]">
+          <div className="mt-2 flex flex-col gap-[18px] lg:flex-row lg:items-center lg:gap-10 lg:border-t lg:border-line lg:pt-[22px]">
             <div className="grid grid-cols-2 border-y border-line lg:flex lg:gap-x-11 lg:border-y-0">
               {destaques.map((d, i) => (
                 <div
@@ -63,6 +63,7 @@ export default function Sobre() {
                 </div>
               ))}
             </div>
+            <span aria-hidden="true" className="hidden h-12 w-px bg-line lg:block" />
             <a
               href={`https://instagram.com/${site.instagram}`}
               target="_blank"
