@@ -18,7 +18,7 @@ export default function Oferta() {
     >
       <div
         aria-hidden="true"
-        className="halftone absolute top-0 -left-[60px] h-full w-[220px] bg-brand opacity-90 [clip-path:polygon(55%_0,100%_0,45%_100%,0_100%)]"
+        className="halftone absolute top-0 -left-[60px] hidden lg:block h-full w-[220px] bg-brand opacity-90 [clip-path:polygon(55%_0,100%_0,45%_100%,0_100%)]"
       />
       <div className="wrap relative grid items-start gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)]">
         <div id="incluso" className="flex flex-col gap-7">
@@ -27,15 +27,13 @@ export default function Oferta() {
             {itensInclusos.map((item, i) => (
               <div
                 key={item.titulo}
-                className={`flex items-start justify-between gap-5 py-5 ${i < itensInclusos.length - 1 ? 'border-b border-line' : ''}`}
+                className={`grid grid-cols-[minmax(0,1fr)_auto] items-baseline gap-x-5 gap-y-1 py-5 ${i < itensInclusos.length - 1 ? 'border-b border-line' : ''}`}
               >
-                <div>
-                  <div className="text-[19px] font-bold">{item.titulo}</div>
-                  <div className="text-base text-muted">{item.descricao}</div>
-                </div>
-                <span className={`whitespace-nowrap ${item.valor === 'Incluso' ? 'font-semibold text-brand' : 'text-subtle'}`}>
+                <div className="text-lg leading-snug font-bold lg:text-[19px]">{item.titulo}</div>
+                <span className={`whitespace-nowrap text-[15px] lg:row-span-2 lg:text-base ${item.valor === 'Incluso' ? 'font-semibold text-brand' : 'text-subtle'}`}>
                   {item.valor}
                 </span>
+                <div className="col-span-2 text-[15px] text-muted lg:col-span-1 lg:text-base">{item.descricao}</div>
               </div>
             ))}
           </div>

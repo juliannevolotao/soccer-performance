@@ -39,40 +39,24 @@ export default function Hero() {
         </Button>
       </header>
 
-      <div className="wrap relative grid items-end gap-6 lg:min-h-[680px] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
-        <div className="flex flex-col items-start gap-[22px] pt-14 pb-6">
-          <p className="m-0 font-label text-xs tracking-[0.1em] text-muted">PROGRAMA DE TREINO PARA ATLETAS DE FUTEBOL</p>
-          <h1 className="dsp m-0 text-[clamp(56px,7.4vw,112px)] text-white">
+      <div className="wrap relative grid gap-x-6 lg:min-h-[680px] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:grid-rows-[auto_1fr]">
+        <div className="flex flex-col items-start gap-4 pt-10 lg:gap-[22px] lg:pt-14">
+          <p className="m-0 font-label text-[11px] tracking-[0.1em] text-muted lg:text-xs">
+            PROGRAMA DE TREINO PARA ATLETAS DE FUTEBOL
+          </p>
+          <h1 className="dsp m-0 text-[clamp(52px,7.4vw,112px)] text-white">
             Soccer
             <br />
             Performance
           </h1>
-          <div className="dsp bg-brand py-2.5 pr-[30px] pl-6 text-[clamp(26px,3vw,40px)] leading-none text-black [clip-path:polygon(5%_0,100%_0,95%_100%,0_100%)]">
-            Pré-Temporada
-          </div>
-          <p className="mt-1 mb-0 max-w-[520px] text-xl leading-normal text-soft">
-            Um programa de 6 semanas na academia para você chegar na temporada mais forte, mais rápido e aguentando o
-            jogo inteiro.
-          </p>
-          <div className="mt-1.5 flex flex-wrap items-center gap-x-7 gap-y-3.5">
-            <Button href="#oferta">Quero começar</Button>
-            <a href="#programa" className="border-b-2 border-brand pb-0.5 font-semibold text-ink no-underline">
-              Ver o que vem no programa
-            </a>
-          </div>
-          <div className="mt-[18px] flex flex-wrap gap-x-[34px] gap-y-2.5">
-            {numeros.map((n) => (
-              <div key={n.legenda} className="max-w-[150px]">
-                <div className="dsp text-[44px] text-brand">
-                  <Contador valor={n.valor} />
-                </div>
-                <div className="text-sm text-muted">{n.legenda}</div>
-              </div>
-            ))}
+          {/* subtítulo da marca: só texto, para não parecer botão */}
+          <div className="-mt-1 flex items-center gap-3">
+            <span aria-hidden="true" className="h-1 w-10 bg-brand lg:w-14" />
+            <span className="dsp text-[clamp(26px,3vw,40px)] leading-none text-brand">Pré-Temporada</span>
           </div>
         </div>
 
-        <div className="relative flex items-end justify-center self-stretch">
+        <div className="relative -mx-4 mt-2 flex h-[360px] items-end justify-center overflow-hidden sm:mx-0 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mt-0 lg:h-auto lg:self-stretch lg:overflow-visible">
           {/* brilho laranja atrás do Mateus */}
           <div
             aria-hidden="true"
@@ -81,7 +65,7 @@ export default function Hero() {
           {/* faixa diagonal da marca */}
           <div
             aria-hidden="true"
-            className="halftone absolute top-[9%] bottom-[8%] left-[54%] w-[150px] -translate-x-1/2 -skew-x-[16deg] bg-brand"
+            className="halftone absolute top-[9%] bottom-[8%] left-[54%] w-[110px] -translate-x-1/2 -skew-x-[16deg] bg-brand lg:w-[150px]"
           />
           <img
             src="/images/mateus-hero.png"
@@ -89,11 +73,34 @@ export default function Hero() {
             width="1024"
             height="1536"
             fetchPriority="high"
-            className="relative block h-auto w-full max-w-[500px]"
+            className="relative block h-full w-auto max-w-none object-contain object-bottom lg:h-auto lg:w-full lg:max-w-[500px]"
           />
-          <div className="absolute bottom-[120px] -left-3 flex flex-col gap-0.5 border border-[#2E2E2E] bg-black py-3.5 pr-[22px] pl-[18px] [clip-path:polygon(0_0,100%_0,94%_100%,0_100%)]">
-            <span className="dsp text-[30px] leading-none">Mateus Leon</span>
-            <span className="text-sm text-muted">Pós-graduado em alto rendimento · {site.cref}</span>
+          <div className="absolute bottom-5 left-4 flex flex-col gap-0.5 border border-[#2E2E2E] bg-black py-2.5 pr-5 pl-4 [clip-path:polygon(0_0,100%_0,94%_100%,0_100%)] sm:left-0 lg:bottom-[120px] lg:-left-3 lg:py-3.5 lg:pr-[22px] lg:pl-[18px]">
+            <span className="dsp text-[22px] leading-none lg:text-[30px]">Mateus Leon</span>
+            <span className="text-xs text-muted lg:text-sm">Pós-graduado em alto rendimento · {site.cref}</span>
+          </div>
+        </div>
+
+        <div className="flex flex-col items-start gap-5 pt-7 pb-6 lg:gap-[22px] lg:pt-[26px]">
+          <p className="m-0 max-w-[520px] text-[17px] leading-[1.5] text-soft lg:text-xl lg:leading-normal">
+            Um programa de 6 semanas na academia para você chegar na temporada mais forte, mais rápido e aguentando o
+            jogo inteiro.
+          </p>
+          <div className="flex w-full flex-col items-stretch gap-4 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-7">
+            <Button href="#oferta">Quero começar</Button>
+            <a href="#programa" className="self-center border-b-2 border-brand pb-0.5 font-semibold text-ink no-underline sm:self-auto">
+              Ver o que vem no programa
+            </a>
+          </div>
+          <div className="mt-3 grid w-full max-w-[560px] grid-cols-4 border-y border-line lg:mt-[18px] lg:border-y-0">
+            {numeros.map((n, i) => (
+              <div key={n.legenda} className={`py-3.5 pr-2 lg:py-0 ${i > 0 ? 'border-l border-line pl-3 lg:border-l-0 lg:pl-0' : ''}`}>
+                <div className="dsp text-[34px] leading-none text-brand lg:text-[44px]">
+                  <Contador valor={n.valor} />
+                </div>
+                <div className="mt-1 text-xs leading-tight text-muted lg:text-sm">{n.legenda}</div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
