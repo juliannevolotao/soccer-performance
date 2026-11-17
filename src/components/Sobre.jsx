@@ -24,18 +24,22 @@ export default function Sobre() {
 
         <div className="flex flex-col gap-[18px]">
           <div className="flex flex-col gap-2.5">
-            <span className="font-sans text-[11.5px] font-semibold tracking-[0.12em] lg:text-xs lg:font-label lg:font-normal lg:tracking-[0.1em] text-brand">QUEM VAI TE TREINAR</span>
+            <span className="font-label text-[10.5px] tracking-[0.08em] lg:text-xs lg:tracking-[0.1em] text-brand">QUEM VAI TE TREINAR</span>
             <h2 className="title-section m-0">Mateus Leon</h2>
             <span className="text-muted">
               Ex-atleta · pós-graduado em esportes de alto rendimento pelo NAR ·{' '}
               <span className="whitespace-nowrap">{site.cref}</span>
             </span>
           </div>
-          <p className="mt-1.5 mb-0.5 flex items-baseline gap-3 text-[22px] font-medium text-ink italic">
-            <span aria-hidden="true" className="dsp text-[26px] text-brand">
+          <p className="mt-1.5 mb-0.5 flex items-start gap-3 text-[22px] leading-[1.3] font-medium text-ink italic">
+            <span aria-hidden="true" className="dsp text-[26px] leading-[1.1] text-brand">
               //
             </span>
-            Performance não acontece por acaso.
+            <span>
+              Performance não acontece
+              <br />
+              por acaso.
+            </span>
           </p>
           <p className="m-0 text-lg text-soft">
             Construí minha trajetória dentro do esporte, primeiro como atleta e depois trabalhando com atletas de todos os
@@ -45,10 +49,10 @@ export default function Sobre() {
             Meu trabalho é desenvolver o que decide o jogo: força, potência, velocidade, resistência e prevenção de
             lesões. Com ciência, planejamento e consistência, para você chegar mais preparado aos momentos decisivos.
           </p>
-          <div className="mt-2 flex flex-wrap gap-x-11 gap-y-4 border-t border-line pt-[22px]">
-            {destaques.map((d) => (
-              <div key={d.valor}>
-                <div className={`dsp text-[40px] ${d.laranja ? 'text-brand' : ''}`}>{d.valor}</div>
+          <div className="mt-2 grid grid-cols-2 border-y border-line lg:flex lg:gap-x-11 lg:border-b-0 lg:pt-[22px]">
+            {destaques.map((d, i) => (
+              <div key={d.valor} className={`py-4 lg:py-0 ${i > 0 ? 'border-l border-line pl-5 lg:border-l-0 lg:pl-0' : ''}`}>
+                <div className={`dsp text-[36px] lg:text-[40px] ${d.laranja ? 'text-brand' : ''}`}>{d.valor}</div>
                 <div className="text-sm text-muted">{d.legenda}</div>
               </div>
             ))}
@@ -57,7 +61,7 @@ export default function Sobre() {
             href={`https://instagram.com/${site.instagram}`}
             target="_blank"
             rel="noopener"
-            className="inline-flex min-h-12 items-center gap-2.5 self-start border border-[#3A3A3A] px-5 font-semibold text-ink no-underline hover:border-brand"
+            className="inline-flex min-h-12 items-center justify-center gap-2.5 self-stretch border sm:self-start border-[#3A3A3A] px-5 font-semibold text-ink no-underline hover:border-brand"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
               <rect x="3" y="3" width="18" height="18" rx="5" />

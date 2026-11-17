@@ -20,7 +20,7 @@ const pilares = [
     nome: 'Velocidade',
     texto: 'Sprints curtos, mudança de direção e coordenação, do jeito que a jogada acontece.',
     caixa: 'bg-black lg:ml-[10%] [clip-path:polygon(3%_0,100%_0,97%_100%,0_100%)]',
-    palavra: 'text-transparent [-webkit-text-stroke:2px_#FFFFFF]',
+    palavra: 'text-transparent [-webkit-text-stroke:1.25px_#FFFFFF] lg:[-webkit-text-stroke:1.5px_#FFFFFF]',
     texto_cor: 'text-soft',
     traco: true,
   },
