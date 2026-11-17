@@ -46,9 +46,8 @@ export default function Hero() {
             PARA ATLETAS DE FUTEBOL
           </p>
           <h1 className="dsp m-0 text-[clamp(64px,7.4vw,112px)] text-white">
-            Soccer
-            <br />
-            Performance
+            <span className="block text-[1.42em] leading-[0.86]">Soccer</span>
+            <span className="block">Performance</span>
           </h1>
           {/* subtítulo da marca: só texto, para não parecer botão */}
           <div className="-mt-1 flex items-center gap-3">

@@ -133,6 +133,12 @@
   background-size: 8px 8px;
 }
 
+/* Mesma textura, mais discreta, para fundos laranja com texto por cima */
+@utility halftone-soft {
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.09) 1.2px, transparent 2px);
+  background-size: 8px 8px;
+}
+
 /* Pontilhado claro e discreto para fundos pretos */
 @utility halftone-light {
   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.07) 1px, transparent 1.6px);

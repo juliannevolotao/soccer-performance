@@ -28,7 +28,7 @@ const pilares = [
     nome: 'Resistência',
     texto: 'Intervalados que imitam o ritmo do jogo, para repetir esforços até o apito final.',
     imagem: { src: '/images/treino-esteira.webp', alt: 'Atleta correndo na esteira acompanhado pelo Mateus', pos: '50% 45%' },
-    caixa: 'halftone bg-brand lg:ml-[2%] [clip-path:polygon(3%_0,100%_0,100%_100%,0_100%)]',
+    caixa: 'halftone-soft bg-brand lg:ml-[2%] [clip-path:polygon(3%_0,100%_0,100%_100%,0_100%)]',
     palavra: 'text-black',
     texto_cor: 'text-[#1A0E08] font-medium',
   },

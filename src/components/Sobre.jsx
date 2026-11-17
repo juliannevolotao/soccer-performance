@@ -24,7 +24,9 @@ export default function Sobre() {
 
         <div className="flex flex-col gap-[18px]">
           <div className="flex flex-col gap-2.5">
-            <span className="font-label text-[10.5px] tracking-[0.08em] lg:text-xs lg:tracking-[0.1em] text-brand">QUEM VAI TE TREINAR</span>
+            <span className="font-label text-[10.5px] tracking-[0.08em] lg:text-xs lg:tracking-[0.1em] text-brand">
+              QUEM VAI TE TREINAR
+            </span>
             <h2 className="title-section m-0">Mateus Leon</h2>
             <span className="text-muted">
               Ex-atleta · pós-graduado em esportes de alto rendimento pelo NAR ·{' '}
@@ -42,34 +44,49 @@ export default function Sobre() {
             </span>
           </p>
           <p className="m-0 text-lg text-soft">
-            Construí minha trajetória dentro do esporte, primeiro como atleta e depois trabalhando com atletas de todos os
-            níveis, vivendo na prática os desafios da preparação física e da busca pela alta performance.
+            Construí minha trajetória dentro do esporte, primeiro como atleta e depois trabalhando com atletas de todos
+            os níveis, vivendo na prática os desafios da preparação física e da busca pela alta performance.
           </p>
           <p className="m-0 text-muted">
             Meu trabalho é desenvolver o que decide o jogo: força, potência, velocidade, resistência e prevenção de
             lesões. Com ciência, planejamento e consistência, para você chegar mais preparado aos momentos decisivos.
           </p>
-          <div className="mt-2 grid grid-cols-2 border-y border-line lg:flex lg:gap-x-11 lg:border-b-0 lg:pt-[22px]">
-            {destaques.map((d, i) => (
-              <div key={d.valor} className={`py-4 lg:py-0 ${i > 0 ? 'border-l border-line pl-5 lg:border-l-0 lg:pl-0' : ''}`}>
-                <div className={`dsp text-[36px] lg:text-[40px] ${d.laranja ? 'text-brand' : ''}`}>{d.valor}</div>
-                <div className="text-sm text-muted">{d.legenda}</div>
-              </div>
-            ))}
+          <div className="mt-2 flex flex-col gap-[18px] lg:flex-row lg:items-center lg:justify-between lg:gap-8 lg:border-t lg:border-line lg:pt-[22px]">
+            <div className="grid grid-cols-2 border-y border-line lg:flex lg:gap-x-11 lg:border-y-0">
+              {destaques.map((d, i) => (
+                <div
+                  key={d.valor}
+                  className={`py-4 lg:py-0 ${i > 0 ? 'border-l border-line pl-5 lg:border-l-0 lg:pl-0' : ''}`}
+                >
+                  <div className={`dsp text-[36px] lg:text-[40px] ${d.laranja ? 'text-brand' : ''}`}>{d.valor}</div>
+                  <div className="text-sm text-muted">{d.legenda}</div>
+                </div>
+              ))}
+            </div>
+            <a
+              href={`https://instagram.com/${site.instagram}`}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex min-h-12 shrink-0 items-center justify-center gap-2.5 self-stretch border border-[#3A3A3A] px-5 font-semibold text-ink no-underline transition-[border-color,color,background-color] duration-300 ease-out hover:border-brand hover:bg-brand/10 hover:text-white sm:self-start lg:self-center"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <path d="M17.5 6.5h0" />
+              </svg>
+              @{site.instagram}
+            </a>
           </div>
-          <a
-            href={`https://instagram.com/${site.instagram}`}
-            target="_blank"
-            rel="noopener"
-            className="inline-flex min-h-12 items-center justify-center gap-2.5 self-stretch border sm:self-start border-[#3A3A3A] px-5 font-semibold text-ink no-underline hover:border-brand"
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="5" />
-              <circle cx="12" cy="12" r="4" />
-              <path d="M17.5 6.5h0" />
-            </svg>
-            @{site.instagram}
-          </a>
         </div>
       </div>
     </section>

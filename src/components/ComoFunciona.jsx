@@ -86,7 +86,7 @@ export default function ComoFunciona() {
               <div
                 key={s.n}
                 className={`relative grid grid-cols-[auto_minmax(0,1fr)] items-center gap-x-5 overflow-hidden py-5 pr-5 pl-6 md:grid-cols-1 md:gap-y-4 md:px-7 md:pt-6 md:pb-7 ${
-                  i === 2 ? 'halftone bg-brand text-black' : 'border border-[#2E2E2E] bg-panel-2'
+                  i === 2 ? 'halftone-soft bg-brand text-black' : 'border border-[#2E2E2E] bg-panel-2'
                 }`}
               >
                 {i < 2 && <span aria-hidden="true" className="absolute top-0 bottom-0 left-0 w-1 bg-brand md:top-0 md:right-auto md:bottom-auto md:h-1 md:w-16" />}
