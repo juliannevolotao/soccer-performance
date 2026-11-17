@@ -23,7 +23,7 @@ const semanas = [
 
 export default function ComoFunciona() {
   return (
-    <section id="como-funciona" className="pt-20 pb-[110px]">
+    <section id="como-funciona" className="pt-14 pb-16 lg:pt-20 lg:pb-[110px]">
       <div className="wrap flex flex-col gap-10">
         <div className="flex flex-col gap-3">
           <h2 className="title-section m-0">Duas fases, seis semanas</h2>

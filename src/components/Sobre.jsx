@@ -7,8 +7,8 @@ const destaques = [
 
 export default function Sobre() {
   return (
-    <section id="sobre" className="pt-[100px] pb-[110px]">
-      <div className="wrap grid items-center gap-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
+    <section id="sobre" className="pt-14 pb-16 lg:pt-[100px] lg:pb-[110px]">
+      <div className="wrap grid items-center gap-10 lg:gap-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
         <div className="relative min-h-[520px]">
           <div
             aria-hidden="true"
@@ -24,7 +24,7 @@ export default function Sobre() {
 
         <div className="flex flex-col gap-[18px]">
           <div className="flex flex-col gap-2.5">
-            <span className="font-label text-xs tracking-[0.1em] text-brand">QUEM VAI TE TREINAR</span>
+            <span className="font-sans text-[11.5px] font-semibold tracking-[0.12em] lg:text-xs lg:font-label lg:font-normal lg:tracking-[0.1em] text-brand">QUEM VAI TE TREINAR</span>
             <h2 className="title-section m-0">Mateus Leon</h2>
             <span className="text-muted">
               Ex-atleta · pós-graduado em esportes de alto rendimento pelo NAR ·{' '}

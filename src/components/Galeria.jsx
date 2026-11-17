@@ -123,7 +123,7 @@ export default function Galeria() {
   }
 
   return (
-    <section aria-label="Fotos de treinos" className="pb-[110px]">
+    <section aria-label="Fotos de treinos" className="pb-16 lg:pb-[110px]">
       {/* No celular: carrossel que trava em cada foto. A partir de sm: as três lado a lado. */}
       <div
         ref={trilho}

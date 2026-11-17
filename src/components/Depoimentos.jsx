@@ -2,7 +2,7 @@ import { depoimentos } from '../config.js'
 
 export default function Depoimentos() {
   return (
-    <section className="relative bg-panel py-[140px] [clip-path:polygon(0_72px,100%_0,100%_100%,0_calc(100%_-_72px))]">
+    <section className="relative bg-panel py-[88px] [clip-path:polygon(0_40px,100%_0,100%_100%,0_calc(100%_-_40px))] lg:py-[140px] lg:[clip-path:polygon(0_72px,100%_0,100%_100%,0_calc(100%_-_72px))]">
       <div className="wrap flex flex-col gap-10">
         <h2 className="title-section m-0">Quem já treinou com o Mateus</h2>
         <div className="grid gap-5 lg:grid-cols-3">

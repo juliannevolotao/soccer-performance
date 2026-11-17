@@ -39,7 +39,7 @@ function Pergunta({ pergunta, resposta, inicial }) {
 
 export function Duvidas() {
   return (
-    <section id="duvidas" className="pt-[70px] pb-[110px]">
+    <section id="duvidas" className="pt-12 pb-16 lg:pt-[70px] lg:pb-[110px]">
       <div className="wrap flex max-w-[920px] flex-col gap-7">
         <h2 className="title-section m-0">Dúvidas frequentes</h2>
         <div className="border-t border-line">
@@ -54,7 +54,7 @@ export function Duvidas() {
 
 export function Chamada() {
   return (
-    <section id="chamada" className="halftone relative bg-brand pt-[130px] pb-[110px] text-black [clip-path:polygon(0_64px,100%_0,100%_100%,0_100%)]">
+    <section id="chamada" className="halftone relative bg-brand pt-[88px] pb-16 text-black [clip-path:polygon(0_40px,100%_0,100%_100%,0_100%)] lg:pt-[130px] lg:pb-[110px] lg:[clip-path:polygon(0_64px,100%_0,100%_100%,0_100%)]">
       <div className="wrap flex flex-wrap items-center justify-between gap-7">
         <h2 className="dsp m-0 max-w-[760px] text-[clamp(44px,6vw,84px)] text-black">
           A temporada começa antes do primeiro jogo

@@ -18,7 +18,7 @@ const perfis = [
 
 export default function ParaQuem() {
   return (
-    <section className="pt-[120px] pb-[100px]">
+    <section className="pt-[72px] pb-16 lg:pt-[120px] lg:pb-[100px]">
       <div className="wrap flex flex-col gap-11">
         <h2 className="title-section m-0 max-w-[760px]">Para o atleta que leva a pré-temporada a sério</h2>
         <div className="grid gap-5 lg:grid-cols-3">

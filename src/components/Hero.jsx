@@ -18,7 +18,7 @@ const numeros = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-black pb-24 [clip-path:polygon(0_0,100%_0,100%_calc(100%_-_72px),0_100%)]">
+    <section className="relative overflow-hidden bg-black pb-14 [clip-path:polygon(0_0,100%_0,100%_calc(100%_-_40px),0_100%)] lg:pb-24 lg:[clip-path:polygon(0_0,100%_0,100%_calc(100%_-_72px),0_100%)]">
       {/* pontilhado discreto que some em direção ao texto */}
       <div
         aria-hidden="true"
@@ -41,10 +41,10 @@ export default function Hero() {
 
       <div className="wrap relative grid gap-x-6 lg:min-h-[680px] lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:grid-rows-[auto_1fr]">
         <div className="flex flex-col items-start gap-4 pt-10 lg:gap-[22px] lg:pt-14">
-          <p className="m-0 font-label text-[11px] tracking-[0.1em] text-muted lg:text-xs">
+          <p className="m-0 font-sans text-[11.5px] font-semibold tracking-[0.12em] lg:text-xs lg:font-label lg:font-normal lg:tracking-[0.1em] text-muted">
             PROGRAMA DE TREINO PARA ATLETAS DE FUTEBOL
           </p>
-          <h1 className="dsp m-0 text-[clamp(52px,7.4vw,112px)] text-white">
+          <h1 className="dsp m-0 text-[clamp(64px,7.4vw,112px)] text-white">
             Soccer
             <br />
             Performance

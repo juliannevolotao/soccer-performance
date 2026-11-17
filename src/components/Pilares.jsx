@@ -42,7 +42,7 @@ export default function Pilares() {
   return (
     <section
       id="programa"
-      className="relative overflow-hidden bg-panel pt-[140px] pb-[150px] [clip-path:polygon(0_72px,100%_0,100%_calc(100%_-_72px),0_100%)]"
+      className="relative overflow-hidden bg-panel pt-[88px] pb-[96px] [clip-path:polygon(0_40px,100%_0,100%_calc(100%_-_40px),0_100%)] lg:pt-[140px] lg:pb-[150px] lg:[clip-path:polygon(0_72px,100%_0,100%_calc(100%_-_72px),0_100%)]"
     >
       <div className="wrap flex flex-col gap-[18px]">
         <div className="mb-[26px] flex flex-wrap items-end justify-between gap-5">

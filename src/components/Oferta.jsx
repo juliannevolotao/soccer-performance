@@ -14,7 +14,7 @@ export default function Oferta() {
   return (
     <section
       id="oferta"
-      className="relative bg-panel py-[150px] [clip-path:polygon(0_0,100%_72px,100%_100%,0_calc(100%_-_72px))]"
+      className="relative bg-panel py-[96px] [clip-path:polygon(0_0,100%_40px,100%_100%,0_calc(100%_-_40px))] lg:py-[150px] lg:[clip-path:polygon(0_0,100%_72px,100%_100%,0_calc(100%_-_72px))]"
     >
       <div
         aria-hidden="true"
@@ -44,7 +44,7 @@ export default function Oferta() {
             aria-hidden="true"
             className="absolute -top-px -right-px h-3.5 w-[120px] bg-brand [clip-path:polygon(14%_0,100%_0,100%_100%,0_100%)]"
           />
-          <span className="font-label text-[11px] tracking-[0.1em] text-muted">SOCCER PERFORMANCE · PRÉ-TEMPORADA</span>
+          <span className="font-sans text-xs font-semibold tracking-[0.14em] lg:font-label lg:text-[11px] lg:font-normal lg:tracking-[0.1em] text-muted">SOCCER PERFORMANCE · PRÉ-TEMPORADA</span>
           <div>
             <div className="text-base text-subtle">Se fosse vendido separado</div>
             <div className="text-[26px] text-subtle line-through decoration-brand">{preco.separado}</div>
